@@ -589,7 +589,7 @@
         const d = new Date();
         try {
             const date = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-            const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true });
+            const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: true }).toUpperCase();
             return `${date} · ${time}`;
         } catch (e) {
             return d.toLocaleString();
@@ -597,17 +597,12 @@
     }
 
     function fillInfo(id) {
-        const dev = appInfo.developer || {};
+        const APP_NAME = 'Sinhala Jataka Stories';
         const rows = [
-            ['යෙදුම', [appInfo.name, appInfo.version && 'v' + appInfo.version].filter(Boolean).join(' · ')],
-            ['විස්තරය', appInfo.tagline],
-            ['මෙම කතාව', location.origin + location.pathname + '#/story/' + id],
-            ['වෙබ් අඩවිය', appInfo.website],
-            ['නිර්මාපක', [dev.name, dev.role].filter(Boolean).join(' · ')],
-            ['ආයතනය', dev.studio],
-            ['විද්‍යුත් තැපෑල', dev.email],
-            ['වෙබ් අඩවිය (නිර්මාපක)', dev.website],
-            ['දුරකථන', dev.phone],
+            ['App', [APP_NAME, appInfo.version && 'v' + appInfo.version].filter(Boolean).join(' · ')],
+            ['About', '548 Jataka stories in Sinhala. Read, search, save favourites and read offline.'],
+            ['Story link', location.origin + location.pathname + '#/story/' + id],
+            ['Website', appInfo.website],
         ].filter((r) => r[1]);
         const body = $('pdMeta');
         body.textContent = '';
@@ -620,8 +615,8 @@
             tr.append(th, td);
             body.appendChild(tr);
         });
-        $('pdGen').textContent = `Download කළ දිනය සහ වේලාව: ${stamp()}`;
-        $('pdFoot').textContent = [appInfo.name, dev.studio, appInfo.copyright].filter(Boolean).join(' · ');
+        $('pdGen').textContent = `Downloaded on: ${stamp()}`;
+        $('pdFoot').textContent = APP_NAME;
     }
     function fillPrint(id, s) {
         const meta = byId.get(id);
