@@ -575,7 +575,7 @@
         tagline: '',
         version: '',
         website: '',
-        developer: { name: 'Sasindu Nethsara Karanayaka', role: '', email: '', website: '', studio: 'CodeGen N3xt Studio' },
+        developer: { name: 'Sasindu Nethsara Karanayaka', role: '', email: '', website: '', studio: 'CodeGen N3xt Solutions' },
         copyright: '© 2026',
     };
     fetch('app-info.json')
