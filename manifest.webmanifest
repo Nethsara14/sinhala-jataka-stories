@@ -1,0 +1,16 @@
+{
+  "name": "ජාතක කතා",
+  "short_name": "ජාතක කතා",
+  "description": "ජාතක කතා 548ක් - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.",
+  "lang": "si",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1c273d",
+  "theme_color": "#1c273d",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
