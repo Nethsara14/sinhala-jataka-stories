@@ -71,6 +71,7 @@ Push to GitHub, then **Settings → Pages → Deploy from branch → `main` / ro
 ## Author
 
 **Sasindu Nethsara Karanayaka** · [devnethsara.com](https://devnethsara.com/)
+
 CodeGen N3xt Solutions · © 2026
 
 ## Credits and content notice
