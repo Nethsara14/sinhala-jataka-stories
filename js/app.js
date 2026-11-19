@@ -722,6 +722,26 @@
         if (e.key === 'Escape' && !$('sheet').hidden) closeSheet();
     });
 
+    /* ---------- Share app link ---------- */
+    $('btnShare').addEventListener('click', async () => {
+        const url = appInfo.website || 'https://nethsara14.github.io/sinhala-jataka-stories/';
+        const data = { title: 'ජාතක කතා', text: 'ජාතක කතා 548ක් - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.', url };
+        if (navigator.share) {
+            try {
+                await navigator.share(data);
+            } catch (e) {
+                /* user cancelled */
+            }
+            return;
+        }
+        try {
+            await navigator.clipboard.writeText(url);
+            toast('Link එක copy කළා ✔');
+        } catch (e) {
+            window.prompt('Link එක copy කරන්න', url);
+        }
+    });
+
     /* reset progress (two-tap confirm) */
     let resetArmed = false;
     let resetT;

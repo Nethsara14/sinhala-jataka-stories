@@ -111,7 +111,13 @@
       <path d="M20 12a8 8 0 1 1-2.3-5.7" />
       <path d="M20 4v5h-5" />
     </symbol>
-  </svg>
+    <symbol id="i-share" viewBox="0 0 24 24">
+      <circle cx="18" cy="5" r="2.5" />
+      <circle cx="6" cy="12" r="2.5" />
+      <circle cx="18" cy="19" r="2.5" />
+      <path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4" />
+    </symbol>
+    </svg>
 
   <!-- ============ HOME ============ -->
   <section id="home" class="view">
@@ -262,10 +268,17 @@
     <div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
       <div class="sheet-head">
         <h2 id="sheetTitle">තව</h2>
-        <button class="icon-btn" type="button" data-close aria-label="වසන්න" id="sheetClose"><svg class="icon"
-            aria-hidden="true">
-            <use href="#i-close" />
-          </svg></button>
+        <div style="display:flex">
+          <button class="icon-btn" type="button" id="btnShare" aria-label="යෙදුමේ link එක බෙදාගන්න">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-share" />
+            </svg>
+          </button>
+          <button class="icon-btn" type="button" data-close aria-label="වසන්න" id="sheetClose"><svg class="icon"
+              aria-hidden="true">
+              <use href="#i-close" />
+            </svg></button>
+        </div>
       </div>
       <div class="sheet-body">
 

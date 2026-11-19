@@ -2,7 +2,7 @@
    Shell (html/css/js) : network-first (online nam hamadama aluth version eka), offline nam cache eken.
    Data/<id>.json      : cache-first (eka parak load unama offline thiyenawa).
    Code update kalama VERSION eka wenas karanna (optional - network-first nisa auto update wenawa). */
-const VERSION = 'v7';
+const VERSION = 'v8';
 const SHELL_CACHE = 'jk-shell-' + VERSION;
 const DATA_CACHE = 'jk-data-v1';
 const SHELL = [
