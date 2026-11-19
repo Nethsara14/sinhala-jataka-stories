@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="si">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ජාතක කතා</title>
-<meta name="description" content="ජාතක කතා 548ක් - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
-<meta name="theme-color" content="#faf7f2">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" href="icons/icon-192.png">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="ජාතක කතා">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<script>
-  (function () {
-    try {
-      var p = JSON.parse(localStorage.getItem('jataka_prefs')) || {};
-      var r = document.documentElement;
-      if (p.theme === 'light' || p.theme === 'dark') r.dataset.theme = p.theme;
-      if (p.fs) r.style.setProperty('--fs', p.fs + 'px');
-    } catch (e) { }
-    try { if (sessionStorage.getItem('jk_splash')) document.documentElement.classList.add('no-splash'); } catch (e) { } // NEW
-  })();
-</script>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ජාතක කතා</title>
+  <meta name="description" content="ජාතක කතා 548ක් - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
+  <meta name="theme-color" content="#faf7f2">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="ජාතක කතා">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+<!-- Link preview (WhatsApp, Telegram, Facebook, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ජාතක කතා">
+<meta property="og:title" content="ජාතක කතා · Sinhala Jataka Stories">
+<meta property="og:description" content="ජාතක කතා 548ක් - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
+<meta property="og:url" content="https://nethsara14.github.io/sinhala-jataka-stories/">
+<meta property="og:image" content="https://nethsara14.github.io/sinhala-jataka-stories/icons/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jathaka Katha logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ජාතක කතා · Sinhala Jataka Stories">
+<meta name="twitter:description" content="ජාතක කතා 548ක් - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
+<meta name="twitter:image" content="https://nethsara14.github.io/sinhala-jataka-stories/icons/og-image.jpg">
+  <script>
+    (function () {
+      try {
+        var p = JSON.parse(localStorage.getItem('jataka_prefs')) || {};
+        var r = document.documentElement;
+        if (p.theme === 'light' || p.theme === 'dark') r.dataset.theme = p.theme;
+        if (p.fs) r.style.setProperty('--fs', p.fs + 'px');
+      } catch (e) { }
+      try { if (sessionStorage.getItem('jk_splash')) document.documentElement.classList.add('no-splash'); } catch (e) { } // NEW
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- ============ SPLASH ============ -->
@@ -38,224 +54,285 @@
   </div>
 
   <!-- Icons (inline SVG sprite - extra request ekak nehe) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/></symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.6 7.5 3.6 4.5 6.8 4.5c2 0 3.5 1.1 5.2 3 1.7-1.9 3.2-3 5.2-3 3.2 0 5.2 3 3.8 6.3C19 15.6 12 20 12 20z"/></symbol>
-  <symbol id="i-dice" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3.5"/><circle cx="9" cy="9" r=".8"/><circle cx="15" cy="9" r=".8"/><circle cx="9" cy="15" r=".8"/><circle cx="15" cy="15" r=".8"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
-  <symbol id="i-next" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
-  <symbol id="i-text" viewBox="0 0 24 24"><path d="M3 19 8.5 5 14 19M5 14.5h7M15.5 19l3-8 3 8M16.5 16.5h4"/></symbol>
-  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
-  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></symbol>
-  <symbol id="i-user" viewBox="0 0 24 24">
-    <circle cx="12" cy="8" r="4" />
-    <path d="M4.5 20c1-4 4-6 7.5-6s6.5 2 7.5 6" />
-  </symbol>
-  <symbol id="i-reload" viewBox="0 0 24 24">
-    <path d="M20 12a8 8 0 1 1-2.3-5.7" />
-    <path d="M20 4v5h-5" />
-  </symbol>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M3 11.5 12 4l9 7.5" />
+      <path d="M5.5 10v9.5h13V10" />
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path
+        d="M12 20s-7-4.4-9-9.2C1.6 7.5 3.6 4.5 6.8 4.5c2 0 3.5 1.1 5.2 3 1.7-1.9 3.2-3 5.2-3 3.2 0 5.2 3 3.8 6.3C19 15.6 12 20 12 20z" />
+    </symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="16" rx="3.5" />
+      <circle cx="9" cy="9" r=".8" />
+      <circle cx="15" cy="9" r=".8" />
+      <circle cx="9" cy="15" r=".8" />
+      <circle cx="15" cy="15" r=".8" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </symbol>
+    <symbol id="i-back" viewBox="0 0 24 24">
+      <path d="M15 5l-7 7 7 7" />
+    </symbol>
+    <symbol id="i-next" viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="M16 16l4.5 4.5" />
+    </symbol>
+    <symbol id="i-text" viewBox="0 0 24 24">
+      <path d="M3 19 8.5 5 14 19M5 14.5h7M15.5 19l3-8 3 8M16.5 16.5h4" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" />
+      <path
+        d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" />
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" />
+    </symbol>
+    <symbol id="i-down" viewBox="0 0 24 24">
+      <path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14" />
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4.5 20c1-4 4-6 7.5-6s6.5 2 7.5 6" />
+    </symbol>
+    <symbol id="i-reload" viewBox="0 0 24 24">
+      <path d="M20 12a8 8 0 1 1-2.3-5.7" />
+      <path d="M20 4v5h-5" />
+    </symbol>
   </svg>
 
-<!-- ============ HOME ============ -->
-<section id="home" class="view">
-  <header class="brand">
-    <img class="logo" src="icons/icon-192.png" width="44" height="44" alt="">
-    <div class="brand-txt">
-      <h1>ජාතක කතා</h1>
-      <p id="count">ලෝඩ් වෙමින්…</p>
-    </div>
-    <button id="btnRestart" class="icon-btn" type="button" aria-label="නැවත ආරම්භ කරන්න">
-      <svg class="icon" aria-hidden="true">
-        <use href="#i-reload" />
-      </svg>
-    </button>
-    <button id="btnTheme" class="icon-btn" type="button" aria-label="තේමාව මාරු කරන්න">
-      <svg class="icon" aria-hidden="true">
-        <use href="#i-moon" />
-      </svg>
-    </button>
+  <!-- ============ HOME ============ -->
+  <section id="home" class="view">
+    <header class="brand">
+      <img class="logo" src="icons/icon-192.png" width="44" height="44" alt="">
+      <div class="brand-txt">
+        <h1>ජාතක කතා</h1>
+        <p id="count">ලෝඩ් වෙමින්…</p>
+      </div>
+      <button id="btnRestart" class="icon-btn" type="button" aria-label="නැවත ආරම්භ කරන්න">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-reload" />
+        </svg>
+      </button>
+      <button id="btnTheme" class="icon-btn" type="button" aria-label="තේමාව මාරු කරන්න">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-moon" />
+        </svg>
+      </button>
     </header>
 
-  <button id="progressCard" class="card" type="button">
-    <span class="row"><span>කියවීමේ ප්‍රගතිය</span><b id="progressText">0 / 0</b></span>
-    <span class="bar"><i id="progressBar"></i></span>
-  </button>
-
-  <a id="continueCard" class="card cont" href="#/" hidden>
-    <span class="cont-l">ඉදිරියට කියවන්න</span>
-    <span class="cont-t" id="contName"></span>
-  </a>
-
-  <div class="sticky">
-    <label class="search">
-      <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
-      <input id="q" type="search" placeholder="නම, අංකය හෝ ආදර්ශයක් සොයන්න…" enterkeyhint="search" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="සොයන්න">
-    </label>
-    <div id="pills" class="pills" role="toolbar" aria-label="ෆිල්ටර්">
-      <button class="pill" type="button" data-f="all" aria-pressed="true">සියල්ල</button>
-      <button class="pill" type="button" data-f="read" aria-pressed="false">කියවූ</button>
-      <button class="pill" type="button" data-f="unread" aria-pressed="false">නොකියවූ</button>
-      <span class="sep" aria-hidden="true"></span>
-    </div>
-  </div>
-
-  <p id="result" class="result" aria-live="polite"></p>
-  <div id="list" class="list"><p class="empty">කතා නාමාවලිය ලෝඩ් වෙමින් පවතී…</p></div>
-  <div id="more" class="more" aria-hidden="true"></div>
-</section>
-
-<!-- ============ READER ============ -->
-<section id="reader" class="view" hidden>
-  <div id="rbar" class="rbar">
-    <button id="btnBack" class="icon-btn" type="button" aria-label="ආපසු">
-      <svg class="icon" aria-hidden="true"><use href="#i-back"/></svg>
+    <button id="progressCard" class="card" type="button">
+      <span class="row"><span>කියවීමේ ප්‍රගතිය</span><b id="progressText">0 / 0</b></span>
+      <span class="bar"><i id="progressBar"></i></span>
     </button>
-    <span id="rbarTitle" class="rtitle"></span>
-    <button id="btnFav" class="icon-btn" type="button" aria-label="ප්‍රියතම" aria-pressed="false">
-      <svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg>
-    </button>
-    <button id="btnAa" class="icon-btn" type="button" aria-label="අකුරු ප්‍රමාණය සහ තේමාව" aria-expanded="false">
-      <svg class="icon" aria-hidden="true"><use href="#i-text"/></svg>
-    </button>
-    <i id="rprog" class="rprog"></i>
 
-    <div id="aaPanel" class="panel" hidden>
-      <div class="prow">
-        <button id="fsDown" class="step" type="button" aria-label="අකුරු කුඩා කරන්න">A−</button>
-        <input id="fsRange" type="range" min="15" max="30" step="1" aria-label="අකුරු ප්‍රමාණය">
-        <button id="fsUp" class="step" type="button" aria-label="අකුරු විශාල කරන්න">A+</button>
-      </div>
-      <div class="seg" role="group" aria-label="තේමාව">
-        <button type="button" data-theme-set="auto" aria-pressed="false">ස්වයං</button>
-        <button type="button" data-theme-set="light" aria-pressed="false">දිවා</button>
-        <button type="button" data-theme-set="dark" aria-pressed="false">රාත්‍රී</button>
-      </div>
-    </div>
-  </div>
+    <a id="continueCard" class="card cont" href="#/" hidden>
+      <span class="cont-l">ඉදිරියට කියවන්න</span>
+      <span class="cont-t" id="contName"></span>
+    </a>
 
-  <article class="story">
-    <p id="storyLoading" class="state">ධර්ම දේශනාව පූරණය වෙමින් පවතී…</p>
-
-    <div id="storyError" class="state" hidden>
-      <p id="errText">කතාව ලෝඩ් කිරීමට නොහැකි විය. Internet සම්බන්ධතාව බලන්න.</p>
-      <button id="btnRetry" class="btn" type="button">නැවත උත්සාහ කරන්න</button>
-    </div>
-
-    <div id="storyBody" hidden>
-      <p id="sNum" class="no"></p>
-      <h2 id="sTitle"></h2>
-      <div id="sTags" class="tags"></div>
-      <blockquote id="sTopic" class="topic"></blockquote>
-      <div id="sText" class="text"></div>
-
-      <section class="lesson">
-        <h3>කතාවෙන් දෙන ආදර්ශය</h3>
-        <div id="sLesson"></div>
-      </section>
-
-      <button id="btnDone" class="primary" type="button"></button>
-      
-      <button id="btnPdf" class="btn" type="button">
+    <div class="sticky">
+      <label class="search">
         <svg class="icon" aria-hidden="true">
-          <use href="#i-down" />
+          <use href="#i-search" />
         </svg>
-        <span>PDF ලෙස Download කරන්න</span>
-      </button>
-      
-      <nav class="pn" aria-label="කතා අතර යන්න">
-        <a id="btnPrev" href="#/" data-replace="1"><small>← පෙර ජාතකය</small><span></span></a>
-        <a id="btnNext" href="#/" data-replace="1"><small>ඊළඟ ජාතකය →</small><span></span></a>
-      </nav>
-    </div>
-  </article>
-</section>
-
-<!-- ============ BOTTOM NAV ============ -->
-<nav id="nav" class="nav" aria-label="ප්‍රධාන මෙනුව">
-  <div class="nav-in">
-    <button type="button" data-nav="home" class="on"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span>මුල් පිටුව</span></button>
-    <button type="button" data-nav="fav"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><span>ප්‍රියතම</span></button>
-    <button type="button" data-nav="random"><svg class="icon" aria-hidden="true"><use href="#i-dice"/></svg><span>අහඹු</span></button>
-    <button type="button" data-nav="more"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span>තව</span></button>
-  </div>
-</nav>
-
-<!-- ============ MORE / SETTINGS SHEET ============ -->
-<div id="sheet" class="sheet" hidden>
-  <div class="sheet-bg" data-close></div>
-  <div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-    <div class="sheet-head">
-      <h2 id="sheetTitle">තව</h2>
-      <button class="icon-btn" type="button" data-close aria-label="වසන්න" id="sheetClose"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-    </div>
-    <div class="sheet-body">
-
-      <h3>පෙනුම</h3>
-      <div class="seg" role="group" aria-label="තේමාව">
-        <button type="button" data-theme-set="auto" aria-pressed="false">ස්වයං</button>
-        <button type="button" data-theme-set="light" aria-pressed="false">දිවා</button>
-        <button type="button" data-theme-set="dark" aria-pressed="false">රාත්‍රී</button>
-      </div>
-
-      <div id="offlineBox">
-        <h3>Internet නැතිවත් කියවන්න</h3>
-        <p class="hint">සියලු කතා දැන් එකවර Download කරගන්න (≈ 10 MB). ඉන්පසු Internet නැතිව කියවන්න පුළුවන්.</p>
-        <button id="btnOffline" class="btn" type="button"><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg><span id="offLabel">සියලු කතා Download කරන්න</span></button>
-        <div class="bar"><i id="offBar"></i></div>
-        <p id="offText" class="hint"></p>
-      </div>
-
-      <h3>කියවීමේ ප්‍රගතිය</h3>
-      <button id="btnReset" class="btn danger" type="button">කියවූ සටහන් මකාදමන්න</button>
-
-      <h3>නිර්මාපක</h3>
-      <div class="dev">
-        <div class="dev-top">
-          <div class="avatar" aria-hidden="true">SN</div>
-          <div>
-            <b>Sasindu Nethsara Karanayaka</b>
-            <small>Full Stack Software Engineer &amp; UI/UX Designer</small>
-            <small>BSc (Hons) Full Stack Software Engineering Undergraduate · Birmingham City University (Level 5)</small>
-          </div>
-        </div>
-        <a class="link" href="https://github.com/Nethsara14/sinhala-jataka-stories" target="_blank" rel="noopener">🐙
-          github.com/Nethsara14/sinhala-jataka-stories</a>
-        <a class="link" href="mailto:devnthsara@gmail.com">✉️ devnthsara@gmail.com</a>
-        <a class="link" href="https://devnethsara.com/" target="_blank" rel="noopener">🌐 www.devnethsara.com</a>
-        <p class="hint center">CodeGen N3xt Solutions · © 2026</p>
+        <input id="q" type="search" placeholder="නම, අංකය හෝ ආදර්ශයක් සොයන්න…" enterkeyhint="search" autocomplete="off"
+          autocapitalize="off" spellcheck="false" aria-label="සොයන්න">
+      </label>
+      <div id="pills" class="pills" role="toolbar" aria-label="ෆිල්ටර්">
+        <button class="pill" type="button" data-f="all" aria-pressed="true">සියල්ල</button>
+        <button class="pill" type="button" data-f="read" aria-pressed="false">කියවූ</button>
+        <button class="pill" type="button" data-f="unread" aria-pressed="false">නොකියවූ</button>
+        <span class="sep" aria-hidden="true"></span>
       </div>
     </div>
-  </div>
-</div>
 
-<div id="toast" class="toast" role="status" hidden></div>
-
-<!-- ============ PRINT / PDF ============ -->
-<div id="printDoc" aria-hidden="true">
-  <div class="pd-head"><span class="pd-brand">ජාතක කතා</span><span class="pd-no" id="pdNo"></span></div>
-  <h1 class="pd-title" id="pdTitle"></h1>
-  <div class="pd-tags" id="pdTags"></div>
-  <blockquote class="pd-topic" id="pdTopic"></blockquote>
-  <div class="pd-text" id="pdText"></div>
-  <h2 class="pd-h" id="pdLessonH">කතාවෙන් දෙන ආදර්ශය</h2>
-  <div class="pd-lesson" id="pdLesson"></div>
-  
-  <section class="pd-info">
-    <h2 class="pd-info-h">About this document</h2>
-    <table class="pd-meta">
-      <tbody id="pdMeta"></tbody>
-    </table>
-    <p class="pd-gen" id="pdGen"></p>
+    <p id="result" class="result" aria-live="polite"></p>
+    <div id="list" class="list">
+      <p class="empty">කතා නාමාවලිය ලෝඩ් වෙමින් පවතී…</p>
+    </div>
+    <div id="more" class="more" aria-hidden="true"></div>
   </section>
-  <p class="pd-foot" id="pdFoot"></p>
+
+  <!-- ============ READER ============ -->
+  <section id="reader" class="view" hidden>
+    <div id="rbar" class="rbar">
+      <button id="btnBack" class="icon-btn" type="button" aria-label="ආපසු">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-back" />
+        </svg>
+      </button>
+      <span id="rbarTitle" class="rtitle"></span>
+      <button id="btnFav" class="icon-btn" type="button" aria-label="ප්‍රියතම" aria-pressed="false">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-heart" />
+        </svg>
+      </button>
+      <button id="btnAa" class="icon-btn" type="button" aria-label="අකුරු ප්‍රමාණය සහ තේමාව" aria-expanded="false">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-text" />
+        </svg>
+      </button>
+      <i id="rprog" class="rprog"></i>
+
+      <div id="aaPanel" class="panel" hidden>
+        <div class="prow">
+          <button id="fsDown" class="step" type="button" aria-label="අකුරු කුඩා කරන්න">A−</button>
+          <input id="fsRange" type="range" min="15" max="30" step="1" aria-label="අකුරු ප්‍රමාණය">
+          <button id="fsUp" class="step" type="button" aria-label="අකුරු විශාල කරන්න">A+</button>
+        </div>
+        <div class="seg" role="group" aria-label="තේමාව">
+          <button type="button" data-theme-set="auto" aria-pressed="false">ස්වයං</button>
+          <button type="button" data-theme-set="light" aria-pressed="false">දිවා</button>
+          <button type="button" data-theme-set="dark" aria-pressed="false">රාත්‍රී</button>
+        </div>
+      </div>
+    </div>
+
+    <article class="story">
+      <p id="storyLoading" class="state">ධර්ම දේශනාව පූරණය වෙමින් පවතී…</p>
+
+      <div id="storyError" class="state" hidden>
+        <p id="errText">කතාව ලෝඩ් කිරීමට නොහැකි විය. Internet සම්බන්ධතාව බලන්න.</p>
+        <button id="btnRetry" class="btn" type="button">නැවත උත්සාහ කරන්න</button>
+      </div>
+
+      <div id="storyBody" hidden>
+        <p id="sNum" class="no"></p>
+        <h2 id="sTitle"></h2>
+        <div id="sTags" class="tags"></div>
+        <blockquote id="sTopic" class="topic"></blockquote>
+        <div id="sText" class="text"></div>
+
+        <section class="lesson">
+          <h3>කතාවෙන් දෙන ආදර්ශය</h3>
+          <div id="sLesson"></div>
+        </section>
+
+        <button id="btnDone" class="primary" type="button"></button>
+
+        <button id="btnPdf" class="btn" type="button">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-down" />
+          </svg>
+          <span>PDF ලෙස Download කරන්න</span>
+        </button>
+
+        <nav class="pn" aria-label="කතා අතර යන්න">
+          <a id="btnPrev" href="#/" data-replace="1"><small>← පෙර ජාතකය</small><span></span></a>
+          <a id="btnNext" href="#/" data-replace="1"><small>ඊළඟ ජාතකය →</small><span></span></a>
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ BOTTOM NAV ============ -->
+  <nav id="nav" class="nav" aria-label="ප්‍රධාන මෙනුව">
+    <div class="nav-in">
+      <button type="button" data-nav="home" class="on"><svg class="icon" aria-hidden="true">
+          <use href="#i-home" />
+        </svg><span>මුල් පිටුව</span></button>
+      <button type="button" data-nav="fav"><svg class="icon" aria-hidden="true">
+          <use href="#i-heart" />
+        </svg><span>ප්‍රියතම</span></button>
+      <button type="button" data-nav="random"><svg class="icon" aria-hidden="true">
+          <use href="#i-dice" />
+        </svg><span>අහඹු</span></button>
+      <button type="button" data-nav="more"><svg class="icon" aria-hidden="true">
+          <use href="#i-menu" />
+        </svg><span>තව</span></button>
+    </div>
+  </nav>
+
+  <!-- ============ MORE / SETTINGS SHEET ============ -->
+  <div id="sheet" class="sheet" hidden>
+    <div class="sheet-bg" data-close></div>
+    <div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+      <div class="sheet-head">
+        <h2 id="sheetTitle">තව</h2>
+        <button class="icon-btn" type="button" data-close aria-label="වසන්න" id="sheetClose"><svg class="icon"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </div>
+      <div class="sheet-body">
+
+        <h3>පෙනුම</h3>
+        <div class="seg" role="group" aria-label="තේමාව">
+          <button type="button" data-theme-set="auto" aria-pressed="false">ස්වයං</button>
+          <button type="button" data-theme-set="light" aria-pressed="false">දිවා</button>
+          <button type="button" data-theme-set="dark" aria-pressed="false">රාත්‍රී</button>
+        </div>
+
+        <div id="offlineBox">
+          <h3>Internet නැතිවත් කියවන්න</h3>
+          <p class="hint">සියලු කතා දැන් එකවර Download කරගන්න (≈ 10 MB). ඉන්පසු Internet නැතිව කියවන්න පුළුවන්.</p>
+          <button id="btnOffline" class="btn" type="button"><svg class="icon" aria-hidden="true">
+              <use href="#i-down" />
+            </svg><span id="offLabel">සියලු කතා Download කරන්න</span></button>
+          <div class="bar"><i id="offBar"></i></div>
+          <p id="offText" class="hint"></p>
+        </div>
+
+        <h3>කියවීමේ ප්‍රගතිය</h3>
+        <button id="btnReset" class="btn danger" type="button">කියවූ සටහන් මකාදමන්න</button>
+
+        <h3>නිර්මාපක</h3>
+        <div class="dev">
+          <div class="dev-top">
+            <div class="avatar" aria-hidden="true">SN</div>
+            <div>
+              <b>Sasindu Nethsara Karanayaka</b>
+              <small>Full Stack Software Engineer &amp; UI/UX Designer</small>
+              <small>BSc (Hons) Full Stack Software Engineering Undergraduate · Birmingham City University (Level
+                5)</small>
+            </div>
+          </div>
+          <a class="link" href="https://github.com/Nethsara14/sinhala-jataka-stories" target="_blank" rel="noopener">🐙
+            github.com/Nethsara14/sinhala-jataka-stories</a>
+          <a class="link" href="mailto:devnthsara@gmail.com">✉️ devnthsara@gmail.com</a>
+          <a class="link" href="https://devnethsara.com/" target="_blank" rel="noopener">🌐 www.devnethsara.com</a>
+          <p class="hint center">CodeGen N3xt Solutions · © 2026</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-<script src="js/app.js"></script>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <!-- ============ PRINT / PDF ============ -->
+  <div id="printDoc" aria-hidden="true">
+    <div class="pd-head"><span class="pd-brand">ජාතක කතා</span><span class="pd-no" id="pdNo"></span></div>
+    <h1 class="pd-title" id="pdTitle"></h1>
+    <div class="pd-tags" id="pdTags"></div>
+    <blockquote class="pd-topic" id="pdTopic"></blockquote>
+    <div class="pd-text" id="pdText"></div>
+    <h2 class="pd-h" id="pdLessonH">කතාවෙන් දෙන ආදර්ශය</h2>
+    <div class="pd-lesson" id="pdLesson"></div>
+
+    <section class="pd-info">
+      <h2 class="pd-info-h">About this document</h2>
+      <table class="pd-meta">
+        <tbody id="pdMeta"></tbody>
+      </table>
+      <p class="pd-gen" id="pdGen"></p>
+    </section>
+    <p class="pd-foot" id="pdFoot"></p>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
+
 </html>
