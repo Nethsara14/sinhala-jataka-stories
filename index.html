@@ -14,20 +14,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="ජාතක කතා">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<!-- Link preview (WhatsApp, Telegram, Facebook, etc.) -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ජාතක කතා">
-<meta property="og:title" content="ජාතක කතා · Sinhala Jataka Stories">
-<meta property="og:description" content="ජාතක කතා - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
-<meta property="og:url" content="https://nethsara14.github.io/sinhala-jataka-stories/">
-<meta property="og:image" content="https://nethsara14.github.io/sinhala-jataka-stories/icons/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Jathaka Katha logo">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ජාතක කතා · Sinhala Jataka Stories">
-<meta name="twitter:description" content="ජාතක කතා - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
-<meta name="twitter:image" content="https://nethsara14.github.io/sinhala-jataka-stories/icons/og-image.png">
+  <!-- Link preview (WhatsApp, Telegram, Facebook, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ජාතක කතා">
+  <meta property="og:title" content="ජාතක කතා · Sinhala Jataka Stories">
+  <meta property="og:description" content="ජාතක කතා - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
+  <meta property="og:url" content="https://nethsara14.github.io/sinhala-jataka-stories/">
+  <meta property="og:image" content="https://nethsara14.github.io/sinhala-jataka-stories/icons/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jathaka Katha logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ජාතක කතා · Sinhala Jataka Stories">
+  <meta name="twitter:description" content="ජාතක කතා - කියවන්න, සොයන්න, ප්‍රියතම කරන්න.">
+  <meta name="twitter:image" content="https://nethsara14.github.io/sinhala-jataka-stories/icons/og-image.png">
   <script>
     (function () {
       try {
@@ -117,7 +117,7 @@
       <circle cx="18" cy="19" r="2.5" />
       <path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4" />
     </symbol>
-    </svg>
+  </svg>
 
   <!-- ============ HOME ============ -->
   <section id="home" class="view">
@@ -266,10 +266,18 @@
   <div id="sheet" class="sheet" hidden>
     <div class="sheet-bg" data-close></div>
     <div class="sheet-box" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+
       <div class="sheet-head">
         <h2 id="sheetTitle">තව</h2>
         <div style="display:flex; gap:8px">
-          <button class="icon-btn" type="button" id="btnShare" aria-label="යෙදුමේ link එක බෙදාගන්න" title="Link එක බෙදාගන්න">
+          <button class="icon-btn" type="button" id="btnInstall" aria-label="යෙදුම Install කරගන්න"
+            title="App එක Install කරගන්න" hidden>
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-down" />
+            </svg>
+          </button>
+          <button class="icon-btn" type="button" id="btnShare" aria-label="යෙදුමේ link එක බෙදාගන්න"
+            title="Link එක බෙදාගන්න">
             <svg class="icon" aria-hidden="true">
               <use href="#i-share" />
             </svg>
@@ -280,13 +288,14 @@
             </svg></button>
         </div>
       </div>
+
       <div class="sheet-body">
 
-        <h3>පෙනුම</h3>
-        <div class="seg" role="group" aria-label="තේමාව">
-          <button type="button" data-theme-set="auto" aria-pressed="false">ස්වයං</button>
-          <button type="button" data-theme-set="light" aria-pressed="false">දිවා</button>
-          <button type="button" data-theme-set="dark" aria-pressed="false">රාත්‍රී</button>
+        <h3>Appearance</h3>
+        <div class="seg" role="group" aria-label="Theme">
+          <button type="button" data-theme-set="auto" aria-pressed="false">Auto</button>
+          <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+          <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
         </div>
 
         <div id="offlineBox">
@@ -299,8 +308,8 @@
           <p id="offText" class="hint"></p>
         </div>
 
-        <h3>කියවීමේ ප්‍රගතිය</h3>
-        <button id="btnReset" class="btn danger" type="button">කියවූ සටහන් මකාදමන්න</button>
+        <h3>Reading Progress</h3>
+        <button id="btnReset" class="btn danger" type="button">Reset Reading Progress</button>
 
         <h3>යෙදුම බෙදාගන්න</h3>
         <button id="btnShare2" class="btn" type="button">
@@ -309,8 +318,8 @@
           </svg>
           <span>යෙදුමේ link එක බෙදාගන්න</span>
         </button>
-        
-        <h3>නිර්මාපක</h3>
+
+        <h3>Developer</h3>
         <div class="dev">
           <div class="dev-top">
             <div class="avatar" aria-hidden="true">SN</div>
@@ -321,7 +330,8 @@
             </div>
           </div>
           <a class="link" href="https://github.com/Nethsara14/sinhala-jataka-stories" target="_blank" rel="noopener">🐙
-            github.com/Nethsara14/sinhala-jataka-stories</a>
+            GitHub ·
+            sinhala-jataka-stories</a>
           <a class="link" href="mailto:devnthsara@gmail.com">✉️ devnthsara@gmail.com</a>
           <a class="link" href="https://devnethsara.com/" target="_blank" rel="noopener">🌐 www.devnethsara.com</a>
           <p class="hint center">CodeGen N3xt Solutions · © 2026</p>

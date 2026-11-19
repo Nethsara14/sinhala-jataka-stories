@@ -744,7 +744,6 @@
     $('btnShare').addEventListener('click', shareApp);
     const share2 = $('btnShare2');
     if (share2) share2.addEventListener('click', shareApp);
-    
 
     /* reset progress (two-tap confirm) */
     let resetArmed = false;
@@ -869,4 +868,49 @@
             navigator.serviceWorker.register('sw.js').catch(() => {});
         });
     }
+
+    // ============ PWA INSTALL BUTTON ============
+    (function () {
+        const btnInstall = $('btnInstall');
+        if (!btnInstall) return;
+
+        let deferredPrompt = null;
+
+        // App eka danatamath install karala nam button eka pennanne na
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+        if (isStandalone) return;
+
+        // iOS (iPhone / iPad) device ekakda kiyala balanawa
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        if (isIOS) {
+            btnInstall.hidden = false;
+        }
+
+        // Android / Chrome / Desktop waladi install prompt eka allagannawa
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            btnInstall.hidden = false;
+        });
+
+        btnInstall.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    btnInstall.hidden = true;
+                }
+                deferredPrompt = null;
+            } else if (isIOS) {
+                closeSheet();
+                toast('පහළ ඇති Share (↑) බොත්තම ඔබා "Add to Home Screen" තෝරන්න.');
+            }
+        });
+
+        // Install wela iwara unama button eka hide karanawa
+        window.addEventListener('appinstalled', () => {
+            btnInstall.hidden = true;
+            deferredPrompt = null;
+        });
+    })();
 })();
