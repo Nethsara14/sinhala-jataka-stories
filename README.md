@@ -72,12 +72,8 @@ Push to GitHub, then **Settings → Pages → Deploy from branch → `main` / ro
 
 **Sasindu Nethsara Karanayaka** · [devnethsara.com](https://devnethsara.com/)
 
-CodeGen N3xt Solutions · © 2026
+## Copyright and License
 
-## Credits and content notice
+All application code (HTML, CSS, JavaScript) and the curated Sinhala Jataka story JSON datasets (`Data/`) in this repository are created and maintained by **Sasindu Nethsara Karanayaka** (CodeGen N3xt Solutions).
 
-The Jataka story texts in the `Data/` folder were collected from publicly available JSON files on GitHub. I could not trace the original repository or its license, so all rights to the story texts remain with their original authors and owners. This project only provides the reader app around them (UI, search, offline mode and PDF export).
-
-If you are the owner of this content and would like it credited differently or removed, please contact me at devnthsara@gmail.com and I will act on it promptly.
-
-The app code (HTML, CSS and JavaScript) was written by Sasindu Nethsara Karanayaka. No open-source license has been applied, so all rights to the code are reserved unless stated otherwise.
+No open-source license has been applied. All rights to the source code and story data files are reserved unless explicitly stated otherwise. For inquiries, contact devnethsara@gmail.com.
