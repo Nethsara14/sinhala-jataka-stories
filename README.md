@@ -5,8 +5,9 @@ A mobile-first Progressive Web App for reading **548 Jataka stories in Sinhala**
 [![Live demo](https://img.shields.io/badge/Live%20demo-open-b45309?style=for-the-badge)](https://nethsara14.github.io/sinhala-jataka-stories/)
 ![PWA](https://img.shields.io/badge/PWA-installable-1c273d?style=for-the-badge)
 ![No build step](https://img.shields.io/badge/build%20step-none-15803d?style=for-the-badge)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-**Live site:** https://nethsara14.github.io/sinhala-jataka-stories/
+**Live site:** [https://nethsara14.github.io/sinhala-jataka-stories/](https://nethsara14.github.io/sinhala-jataka-stories/)
 
 ## Features
 
@@ -72,8 +73,15 @@ Push to GitHub, then **Settings → Pages → Deploy from branch → `main` / ro
 
 **Sasindu Nethsara Karanayaka** · [devnethsara.com](https://devnethsara.com/)
 
-## Copyright and License
+CodeGen N3xt Solutions · © 2026
 
-All application code (HTML, CSS, JavaScript) and the curated Sinhala Jataka story JSON datasets (`Data/`) in this repository are created and maintained by **Sasindu Nethsara Karanayaka** (CodeGen N3xt Solutions).
+## Content Attribution & License
 
-No open-source license has been applied. All rights to the source code and story data files are reserved unless explicitly stated otherwise. For inquiries, contact devnethsara@gmail.com.
+### Story Content Source
+The original Sinhala Jataka story texts used in this application were sourced from the **University of Sri Jayewardenepura (ශ්‍රී ජයවර්ධනපුර විශ්වවිද්‍යාල වෙබ් අඩවිය)**:
+- Source URL: https://www.sjp.ac.lk/buddhism/download-buddhist-555-jathaka-katha-free-pdf/
+
+All structured JSON datasets (`Data/`), schema formatting, categorization tags, topics, and life-lesson summaries were independently engineered, processed, and curated by **Sasindu Nethsara Karanayaka** (CodeGen N3xt Solutions).
+
+### License
+The application source code (HTML, CSS, JavaScript, build scripts) and the structured JSON metadata schema are licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
