@@ -45,6 +45,12 @@ Data/index.json         story list and tags (generated)
 tools/build-index.js    regenerates Data/index.json
 ```
 
+## Standalone Dataset
+
+If you only need the structured Sinhala Jataka story JSON files (with titles, texts, topics, tags, and life-lesson summaries) for your own project or research, the standalone dataset is published in a separate repository:
+
+- **Dataset Repository:** [Nethsara14/sinhala-jataka-stories-dataset](https://github.com/Nethsara14/sinhala-jataka-stories-dataset)
+
 ## Run locally
 
 `fetch()` and the service worker need a server (not `file://`):
@@ -79,7 +85,7 @@ CodeGen N3xt Solutions · © 2026
 
 ### Story Content Source
 The original Sinhala Jataka story texts used in this application were sourced from the **University of Sri Jayewardenepura (ශ්‍රී ජයවර්ධනපුර විශ්වවිද්‍යාල වෙබ් අඩවිය)**:
-- Source URL: https://www.sjp.ac.lk/buddhism/download-buddhist-555-jathaka-katha-free-pdf/
+- Source URL: [https://www.sjp.ac.lk/buddhism/download-buddhist-555-jathaka-katha-free-pdf/](https://www.sjp.ac.lk/buddhism/download-buddhist-555-jathaka-katha-free-pdf/)
 
 All structured JSON datasets (`Data/`), schema formatting, categorization tags, topics, and life-lesson summaries were independently engineered, processed, and curated by **Sasindu Nethsara Karanayaka** (CodeGen N3xt Solutions).
 
